@@ -84,7 +84,7 @@ const BillingDetails = () => {
             </div>
 
             {/* Country input*/}
-            <div className="">
+            <div className="billing-details-select">
               <label htmlFor="country">
                 Country / Region <span className="text-danger">*</span>{" "}
               </label>
@@ -97,7 +97,7 @@ const BillingDetails = () => {
               />
             </div>
             {/* Town input*/}
-            <div className="">
+            <div className="billing-details-select">
               <label htmlFor="town">
                 Town <span className="text-danger">*</span>{" "}
               </label>

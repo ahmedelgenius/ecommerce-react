@@ -1,9 +1,17 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { Link, NavLink } from "react-router-dom";
+import { DataContext } from "../Pages/ContextData";
 const CategoryCard = ({ item }) => {
+  let { setWorldItem } = useContext(DataContext);
+
   return (
     // <div className="col-md-2 col-sm-12">
-    <Link to="/categories" className="my-1 category-card-header">
+    <NavLink
+      onClick={() => setWorldItem(false)}
+      to="/categories"
+      className="my-1 category-card-header"
+    >
       <div className=" category-card border-0 text-center ">
         <div className="category-image ">
           <img src={item.img} className="rounded-circle w-100" alt="" />
@@ -13,7 +21,7 @@ const CategoryCard = ({ item }) => {
           <span className="num-of-products">{item.numberOfProducts}</span>
         </div>
       </div>
-    </Link>
+    </NavLink>
     // </div>
   );
 };

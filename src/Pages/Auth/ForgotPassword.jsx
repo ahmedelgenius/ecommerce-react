@@ -26,7 +26,7 @@ const ForgotPassword = () => {
               </div>
               <div>
                 <Link
-                  to="/register"
+                  to="/codeverification"
                   className="btn bg-main-color text-white with-btn"
                 >
                   Email

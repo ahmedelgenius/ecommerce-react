@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import truckIcon from "../images/truck-fast.svg";
 import disscountIcon from "../images/receipt-disscount.svg";
@@ -9,14 +9,16 @@ import searchIcon from "../images/icons/sreach.svg";
 import heartIcon from "../images/icons/heart.svg";
 import worldIcon from "../images/icons/world.svg";
 import cartIcon from "../images/icons/cart.svg";
+import { useContext } from "react";
+import { DataContext } from "./../Pages/ContextData";
 const Header = () => {
-  const [navName, setNavName] = useState("home");
+  // const [navName, setNavName] = useState(false);
+  let { setWorldItem } = useContext(DataContext);
+  let { worldItem } = useContext(DataContext);
   const activeLink = "text-main-color nav-link-style";
   const normalLink = "text-second-color nav-link-style";
-  const getNavName = (NavName) => {
-    setNavName(NavName);
-  };
-  console.log();
+
+  // console.log(worldItem);
   return (
     <>
       <header className="header-top-strip py-3  bg-main-color">
@@ -74,7 +76,7 @@ const Header = () => {
               <div className="menu-links pt-2  menu-line pe-4">
                 <div className="d-flex justify-content-between fw-bold">
                   <NavLink
-                    onClick={() => getNavName("home")}
+                    onClick={() => setWorldItem(true)}
                     className={({ isActive }) =>
                       isActive ? activeLink : normalLink
                     }
@@ -83,7 +85,7 @@ const Header = () => {
                     Home
                   </NavLink>
                   <NavLink
-                    onClick={() => getNavName("")}
+                    onClick={() => setWorldItem(false)}
                     className={({ isActive }) =>
                       isActive ? activeLink : normalLink
                     }
@@ -92,7 +94,7 @@ const Header = () => {
                     Categories
                   </NavLink>
                   <NavLink
-                    onClick={() => getNavName("")}
+                    onClick={() => setWorldItem(false)}
                     className={({ isActive }) =>
                       isActive ? activeLink : normalLink
                     }
@@ -101,7 +103,7 @@ const Header = () => {
                     About Us
                   </NavLink>
                   <NavLink
-                    onClick={() => getNavName("")}
+                    onClick={() => setWorldItem(false)}
                     className={({ isActive }) =>
                       isActive ? activeLink : normalLink
                     }
@@ -115,16 +117,16 @@ const Header = () => {
             <div className="col-md-4 ">
               <div className="header-upper-links gap-4 d-flex align-items-center  justify-content-end">
                 <div>
-                  <Link to={"#"}>
+                  <Link to={"#"} onClick={() => setWorldItem(false)}>
                     <img src={searchIcon} alt="" />
                   </Link>
                 </div>
                 <div>
-                  <NavLink onClick={() => getNavName("")} to={"/wishlist"}>
+                  <NavLink onClick={() => setWorldItem(false)} to={"/wishlist"}>
                     <img src={heartIcon} alt="" />
                   </NavLink>
                 </div>
-                {navName === "home" ? (
+                {worldItem === true ? (
                   <div className="d-flex">
                     <Link to={"#"}>
                       <img src={worldIcon} alt="" />
@@ -140,7 +142,7 @@ const Header = () => {
 
                 <div>
                   <NavLink
-                    onClick={() => getNavName("")}
+                    onClick={() => setWorldItem(false)}
                     to="/cart"
                     className=" position-relative"
                   >
@@ -156,6 +158,7 @@ const Header = () => {
             <div className="col-md-1  ">
               <div className="">
                 <NavLink
+                  onClick={() => setWorldItem(false)}
                   to="/login"
                   className=" nav-login-btn bg-main-color text-white  "
                 >

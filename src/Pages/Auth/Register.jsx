@@ -27,22 +27,22 @@ const Register = () => {
   // console.log(user.password, user.cpassword);
   async function submitDataForm(e) {
     e.preventDefault();
-    if (user.password !== user.cpassword) {
-      toast.error("passwrod not match contirm password");
-      // console.log("passwrod not match contirm password");
-    } else {
-      let { data } = await axios.post(
-        "https://route-movies-api.vercel.app/signup",
-        user
-      );
-      console.log(data);
-      if (data.message === "success") {
-        setErrorMsg("");
-        goToLogin();
-      } else {
-        setErrorMsg(data.message);
-      }
-    }
+    // if (user.password !== user.cpassword) {
+    //   toast.error("passwrod not match contirm password");
+    // console.log("passwrod not match contirm password");
+    // } else {
+    //   let { data } = await axios.post(
+    //     "https://route-movies-api.vercel.app/signup",
+    //     user
+    //   );
+    //   console.log(data);
+    //   if (data.message === "success") {
+    //     setErrorMsg("");
+    goToLogin();
+    // } else {
+    //   setErrorMsg(data.message);
+    // }
+    // }
   }
   function getFormValue(e) {
     let myUser = { ...user };

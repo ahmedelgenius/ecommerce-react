@@ -23,6 +23,12 @@ import cartImg1 from "../src/images/products/image 13cart1.png";
 import cartImg2 from "../src/images/products/product-4cart2.png";
 import cartImg3 from "../src/images/products/product-2cart3.png";
 import reviewImg from "../src/images/reviwe/Ellipse 68.png";
+import productImgOne from "../src/images/products/productimgone.png";
+import productImgTwo from "../src/images/products/productimgtwo.png";
+import productImgThree from "../src/images/products/productimgthree.png";
+import cardBg1 from "../src/images/bgone.png";
+import cardBg2 from "../src/images/bgtwo.png";
+import cardBg3 from "../src/images/bgthree.png";
 export const categories = [
   {
     id: 1,
@@ -1615,5 +1621,100 @@ export const CartProducts = [
     availableInStock: "In Stock",
     productCode: 5889578,
     qty: 1,
+  },
+];
+
+export const myOrdersProducts = [
+  {
+    id: 1,
+    img: productImgOne,
+    name: "Product Name",
+    desc: "It is a long  fact that a reader will be using lo Ipsudistracted by the readable content ",
+    orderDate: "23 sep 2022",
+    orderSummary: "3 items",
+    status: "Delivered",
+    amountTotal: 152,
+    img2: productImgTwo,
+    name2: "Product Name",
+    desc2:
+      "It is a long  fact that a reader will be using lo Ipsudistracted by the readable content ",
+    img3: productImgThree,
+    name3: "Product Name",
+    desc3:
+      "It is a long  fact that a reader will be using lo Ipsudistracted by the readable content ",
+  },
+  {
+    id: 2,
+    img: productImgOne,
+    name: "Product Name",
+    desc: "It is a long  fact that a reader will be using lo Ipsudistracted by the readable content ",
+    orderDate: "23 sep 2022",
+    orderSummary: "3 items",
+    status: "Delivered",
+    amountTotal: 152,
+  },
+  {
+    id: 3,
+    img: productImgOne,
+    name: "Product Name",
+    desc: "It is a long  fact that a reader will be using lo Ipsudistracted by the readable content ",
+    orderDate: "23 sep 2022",
+    orderSummary: "3 items",
+    status: "Delivered",
+    amountTotal: 152,
+  },
+];
+
+export const MyAddresses = [
+  {
+    id: 1,
+
+    title: "Home address",
+    buyer: "buyer name",
+    country: "Country name",
+    city: "City name",
+    street: "Street name",
+  },
+  {
+    id: 2,
+
+    title: "Home address",
+    buyer: "buyer name",
+    country: "Country name",
+    city: "City name",
+    street: "Street name",
+  },
+  {
+    id: 3,
+
+    title: "Home address",
+    buyer: "buyer name",
+    country: "Country name",
+    city: "City name",
+    street: "Street name",
+  },
+];
+
+export const CardsPayment = [
+  {
+    id: 1,
+    bgImg: cardBg1,
+    card_number: ".... .... .... .289",
+    card_holder: "Nice Robin",
+    date: "09/25",
+  },
+  {
+    id: 2,
+    bgImg: cardBg2,
+    card_number: ".... .... .... .289",
+    card_holder: "Roronoa Zoro",
+    date: "09/25",
+  },
+  {
+    id: 3,
+    bgImg: cardBg3,
+    card_number: ".... .... .... .289",
+    card_holder: "Nice Robin",
+    date: "09/25",
   },
 ];

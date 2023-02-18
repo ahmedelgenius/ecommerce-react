@@ -5,32 +5,38 @@ import faceImg from "../../images/icons/Facebook - Original.svg";
 import googleImg from "../../images/icons/Google - Original.svg";
 import appleImg from "../../images/icons/apple.svg";
 import axios from "axios";
+import { useContext } from "react";
+import { DataContext } from "../ContextData";
 function Login() {
   let [user, setUser] = useState({
     email: "",
     password: "",
     keep: "",
   });
+  let { setWorldItem } = useContext(DataContext);
+
+  const API = "";
   let [errorMsg, setErrorMsg] = useState("");
   const navigate = useNavigate();
-  function goToHome() {
-    let path = "/";
+  function goToUser() {
+    let path = "/user";
     navigate(path);
   }
   async function submitDataForm(e) {
     e.preventDefault();
-    let { data } = await axios.post(
-      "https://route-movies-api.vercel.app/signin",
-      user
-    );
-    console.log(data);
-    if (data.message === "success") {
-      localStorage.setItem("token", data.token);
-      setErrorMsg("");
-      goToHome();
-    } else {
-      setErrorMsg(data.message);
-    }
+    // let { data } = await axios.post(
+    //   API,
+    //   user
+    // );
+    // console.log(data);
+    // if (data.message === "success") {
+    //   localStorage.setItem("token", data.token);
+    //   setErrorMsg("");
+    goToUser();
+    setWorldItem(false);
+    // } else {
+    //   setErrorMsg(data.message);
+    // }
   }
   function getFormValue(e) {
     let myUser = { ...user };

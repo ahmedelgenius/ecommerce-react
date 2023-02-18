@@ -7,7 +7,10 @@ import TwitterIcon from "../images/footer icons/Twitter - Negative.svg";
 import locationIcon from "../images/footer icons/location.svg";
 import callIcon from "../images/footer icons/call.svg";
 import mailIcon from "../images/footer icons/sms.svg";
+import { DataContext } from "./../Pages/ContextData";
+import { useContext } from "react";
 const Footer = () => {
+  let { setWorldItem } = useContext(DataContext);
   return (
     <>
       <footer className=" footer-top">
@@ -57,13 +60,25 @@ const Footer = () => {
                 Customer Servie
               </h4>
               <div className="footer-links d-flex flex-column gap-4">
-                <Link to="#" className="text-dark">
+                <Link
+                  onClick={() => setWorldItem(false)}
+                  to="/faqs"
+                  className="text-dark"
+                >
                   Help & FAQs
                 </Link>
-                <Link to="#" className="text-dark">
+                <Link
+                  onClick={() => setWorldItem(false)}
+                  to="/trackorder"
+                  className="text-dark"
+                >
                   Order Tracking
                 </Link>
-                <Link to="#" className="text-dark">
+                <Link
+                  onClick={() => setWorldItem(false)}
+                  to="/terms"
+                  className="text-dark"
+                >
                   Sitemap
                 </Link>
               </div>

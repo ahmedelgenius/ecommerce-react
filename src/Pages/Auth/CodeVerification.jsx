@@ -1,7 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import loginImg from "../../images/login and regi/Rectangle 12.jpg";
 import { Link } from "react-router-dom";
 const CodeVerification = () => {
+  const [otp, setOtp] = useState(new Array(4).fill(""));
+  const handleChange = (element, index) => {
+    if (isNaN(element.value)) return false;
+
+    setOtp([...otp.map((d, idx) => (idx === index ? element.value : d))]);
+    // focus next input
+    if (element.nextSibling) {
+      element.nextSibling.focus();
+    }
+  };
   return (
     <>
       <section className="code-verification">
@@ -23,25 +33,43 @@ const CodeVerification = () => {
                   Code has been send to {"+01223456789"}
                 </p>
 
-                <form className=" ">
+                <form>
                   <div className="code-verification-inputs mb-5 d-flex gap-2 flex-row  ">
-                    <input
-                      type="number"
-                      className="code-verification-input w-25 "
-                    />
-                    <input
+                    {otp.map((data, index) => (
+                      <input
+                        type="number"
+                        className="code-verification-input w-25 "
+                        maxLength="1"
+                        name="otp"
+                        key={index}
+                        value={data}
+                        onChange={(e) => handleChange(e.target, index)}
+                        onFocus={(e) => e.target.select()}
+                      />
+                    ))}
+                  </div>
+                  {/* <input
                       type="number"
                       className="code-verification-input w-25"
-                    />
-                    <input
+                      min="0"
+                      max="9"
+                      step="1"
+                    /> */}
+                  {/* <input
                       type="number"
                       className="code-verification-input w-25"
-                    />
-                    <input
+                      min="0"
+                      max="9"
+                      step="1"
+                    /> */}
+                  {/* <input
                       type="number"
                       className="code-verification-input  w-25"
-                    />
-                  </div>
+                      min="0"
+                      max="9"
+                      step="1"
+                    /> */}
+                  {/* </div> */}
 
                   <Link
                     to="/newpassword"

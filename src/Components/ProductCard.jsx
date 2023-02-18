@@ -1,12 +1,16 @@
 import ReactStars from "react-rating-stars-component";
-import React from "react";
+import React, { useContext } from "react";
 import cartIcon from "../images/icons/iconproduct.svg";
 import heartIcon from "../images/icons/heart.svg";
 import { Link, NavLink } from "react-router-dom";
+import { DataContext } from "./../Pages/ContextData";
 const ProductCard = ({ item }) => {
+  let { setWorldItem } = useContext(DataContext);
+  let { worldItem } = useContext(DataContext);
   return (
     <div className="col-md-3 col-sm-12">
       <NavLink
+        onClick={() => setWorldItem(false)}
         to="/productdetails/:id"
         className="product-card text-center position-relative"
       >
