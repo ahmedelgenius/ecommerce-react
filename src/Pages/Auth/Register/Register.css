@@ -1,0 +1,70 @@
+/* * registerWith */
+.register-with-header {
+  padding: 50px 0 100px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.register-with-content {
+  width: 40%;
+}
+.register-with-content h2 {
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 42px;
+
+  color: #f1a002;
+}
+.register-with-content p {
+  padding: 40px 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+
+  color: #f1a002;
+}
+.with-icons {
+  list-style: none;
+  padding-right: 35px;
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  justify-content: center;
+}
+.with-btn {
+  padding: 13px 20px;
+  margin: 15px 0;
+  width: 75%;
+  border-radius: 20px;
+  font-size: 18px;
+  line-height: 21px;
+  color: #ffffff;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+.with-desc {
+  position: relative;
+}
+.with-desc::before {
+  content: "";
+  position: absolute;
+  width: 275px;
+  height: 1px;
+  right: -54px;
+  top: 55px;
+
+  background-color: #f1a002;
+}
+.with-desc::after {
+  content: " ";
+  position: absolute;
+  width: 275px;
+  height: 1px;
+  left: -54px;
+  top: 55px;
+
+  background-color: #f1a002;
+}

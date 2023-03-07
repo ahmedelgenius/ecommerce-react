@@ -1,0 +1,115 @@
+.login-content {
+  margin-top: 86px;
+}
+.login-title {
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 42px;
+  color: #4a4844;
+}
+.login-desc {
+  margin-top: 25px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #949494;
+}
+.login-info {
+  padding-right: 80px;
+}
+.login-icons {
+  padding: 25px 0;
+  margin-right: 20px;
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
+.or-line {
+  text-align: center;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: #c4c4c4;
+  position: relative;
+}
+.or-line::before {
+  content: "";
+  position: absolute;
+  width: 191px;
+  height: 1px;
+  left: 10px;
+  bottom: 5px;
+
+  background-color: #e6e6e6;
+}
+.or-line::after {
+  content: " ";
+  position: absolute;
+  width: 191px;
+  height: 1px;
+  right: 10px;
+  bottom: 5px;
+
+  background-color: #e6e6e6;
+}
+.login-input {
+  padding: 15px 15px;
+  border: 2px solid #e5e5e5;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+.login-input::placeholder {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+
+  color: #c4c4c4;
+}
+.login-form label {
+  padding-bottom: 10px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: #4a4844;
+}
+.login-form-header {
+  margin-bottom: 30px;
+}
+.login-input-check {
+  width: 20px;
+  height: 20px;
+  background: #ffffff;
+  border: 1px solid #c4c4c4;
+}
+.label-input-check {
+  margin-left: 10px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: #4a4844;
+}
+.login-btn {
+  width: 90%;
+  padding: 13px 0;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 27px;
+  color: #ffffff;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+.login-link-desc {
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 23px;
+  color: #4a4844;
+}

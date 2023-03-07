@@ -1,15 +1,18 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import addIcon from "../../src/images/icons/product icons/add.svg";
 import minusIcon from "../../src/images/icons/product icons/minus.svg";
 import closeIcon from "../../src/images/icons/close-square.svg";
 import cartIcon from "../../src/images/icons/product icons/Group 5.svg";
 
 import { Link, NavLink } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import { DataContext } from "../Pages/Context/ContextData";
 const ProductsCart = ({ item, cartData, switchData }) => {
   const [amount, setAmount] = useState(1);
-
+  const [t, i18n] = useTranslation();
   let subtotal = 0;
   let finalSubtotal = 0;
+  const { setIncreaseCart } = useContext(DataContext);
 
   // cartData(finalSubtotal);
   const calcSubtotalForAllProducts = () => {
@@ -45,16 +48,29 @@ const ProductsCart = ({ item, cartData, switchData }) => {
               </div>
               <div className="product-content py-3 d-flex flex-column gap-2">
                 <div className="pb-2">
-                  <h1 className="product-cart-name">{item.name}</h1>
+                  <h1 className="product-cart-name">
+                    {i18n.language === "ar" ? item.name_ar : item.name}
+                  </h1>
                 </div>
 
                 <p className="product-cart-code">
-                  Product code: {item.productCode}
+                  {t("product_code")}: {item.productCode}
                 </p>
                 <p className="product-cart-category">
-                  Category: {item.category}
+                  {t("category")}:{" "}
+                  {i18n.language === "ar" ? item.category_ar : item.category}
                 </p>
-                <p className="product-cart-size">Size: {item.size}</p>
+                <p className="product-cart-size">
+                  {i18n.language === "ar" ? (
+                    <p>
+                      {item.size} : {t("size")}
+                    </p>
+                  ) : (
+                    <p>
+                      {t("size")} :{item.size}{" "}
+                    </p>
+                  )}
+                </p>
               </div>
             </div>
           </div>
@@ -69,7 +85,11 @@ const ProductsCart = ({ item, cartData, switchData }) => {
           {switchData === "wishlist" ? (
             <div className="col-md-2">
               <div className="h-100 me-4  d-flex align-items-center justify-content-center">
-                <p className="product-cart-price">{item.availableInStock}</p>
+                <p className="product-cart-price">
+                  {i18n.language === "ar"
+                    ? item.availableInStock_ar
+                    : item.availableInStock}
+                </p>
               </div>
             </div>
           ) : (
@@ -98,9 +118,10 @@ const ProductsCart = ({ item, cartData, switchData }) => {
                 <button
                   type="button"
                   className="bg-main-color text-white wishlist-add-cart"
+                  onClick={() => setIncreaseCart()}
                 >
                   <img src={cartIcon} className="pe-1" alt="" />
-                  Add to cart
+                  {t("addToCart")}
                 </button>
               </div>
             </div>

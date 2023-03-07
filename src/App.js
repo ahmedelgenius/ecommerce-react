@@ -1,33 +1,35 @@
 import React, { useState } from "react";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Home from "./Pages/Home/Home";
+import About from "./Pages/About/About";
+import Contact from "./Pages/Contact/Contact";
+import Categories from "./Pages/Categories/Categories";
+import ProductDetails from "./Pages/Product Detials/ProductDetails";
+import Cart from "./Pages/Cart/Cart";
+import Wishlist from "./Pages/Wishlist/Wishlist";
+import BillingDetails from "./Pages/Billing Details/BillingDetails";
+import Payment from "./Pages/Payment/Payment";
+import OrderSubmited from "./Pages/Order Submit/OrderSubmited";
+import TrackOrder from "./Pages/Track Order/TrackOrder";
+import FAQs from "./Pages/FAQs/FAQs";
+import Terms from "./Pages/Terms/Terms";
+import ErrorPage from "./Pages/Error/ErrorPage";
+import MasterLayout from "./Components/UserProfile/MasterLayout/MasterLayout";
+import Profile from "./Components/UserProfile/Profile/Profile";
+import MyOrders from "./Components/UserProfile/MyOrders/MyOrders";
+import Addresses from "./Components/UserProfile/Addresses/Addresses";
+import SaveCards from "./Components/UserProfile/SaveCards/SaveCards";
+import Login from "./Pages/Auth/Login/Login";
+import Register from "./Pages/Auth/Register/Register";
+import RegisterWith from "./Pages/Auth/Register/RegisterWith";
+import ForgotPassword from "./Pages/Auth/Password/ForgotPassword";
+import CodeVerification from "./Pages/Auth/CodeVerification/CodeVerification";
+import ResetPassword from "./Pages/Auth/Password/ResetPassword";
 import Layout from "./Components/Layout";
-import Home from "./Pages/Home";
-import About from "./Pages/About";
-import Contact from "./Pages/Contact";
-import Categories from "./Pages/Categories";
-import Cart from "./Pages/Cart";
-import ErrorPage from "./Pages/ErrorPage";
-import Wishlist from "./Pages/Wishlist";
-import ProductDetails from "./Pages/ProductDetails";
-import Login from "./Pages/Auth/Login";
-import Register from "./Pages/Auth/Register";
-import RegisterWith from "./Pages/Auth/RegisterWith";
-import ForgotPassword from "./Pages/Auth/ForgotPassword";
-import CodeVerification from "./Pages/Auth/CodeVerification";
-import ResetPassword from "./Pages/Auth/ResetPassword";
-import BillingDetails from "./Pages/BillingDetails";
-import Payment from "./Pages/Payment";
-import OrderSubmited from "./Pages/OrderSubmited";
-import TrackOrder from "./Pages/TrackOrder";
-import MasterLayout from "./Components/UserProfile/MasterLayout";
-import Profile from "./Components/UserProfile/Profile";
-import MyOrders from "./Components/UserProfile/MyOrders";
-import Addresses from "./Components/UserProfile/Addresses";
-import SaveCards from "./Components/UserProfile/SaveCards";
-import { DataContextProvider } from "./Pages/ContextData";
-import FAQs from "./Pages/FAQs";
-import Terms from "./Pages/Terms";
+import { DataContextProvider } from "./Pages/Context/ContextData";
+
 function App() {
   return (
     <>

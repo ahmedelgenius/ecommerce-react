@@ -1,0 +1,50 @@
+.order-submit {
+  padding: 100px 0 50px 0;
+}
+.order-submit-confirmed {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 28px;
+  /* identical to box height, or 93% */
+  padding: 55px 38px 40px 0;
+
+  /* typo color */
+
+  color: #363636;
+}
+.track-order-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* padding: 20px 213.5px; */
+  justify-content: center;
+  border: none;
+  width: 512px;
+  height: 52px;
+
+  /* main */
+
+  background: #f1a002;
+  border-radius: 10px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 12px;
+  /* identical to box height, or 75% */
+
+  /* Background */
+
+  color: #ffffff;
+}
+.order-submit-generate {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 12px;
+  /* identical to box height, or 75% */
+  padding-top: 20px;
+  /* Text 2 */
+
+  color: #9da3a1;
+}

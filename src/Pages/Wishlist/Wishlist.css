@@ -1,0 +1,19 @@
+.wishlist-close-btn,
+.wishlist-add-cart {
+  border: none;
+}
+.wishlist-close-btn {
+  background-color: transparent;
+}
+.wishlist-add-cart {
+  width: 163px;
+  height: 50px;
+  margin-left: 20px;
+  border-radius: 10px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+
+  color: #ffffff;
+}

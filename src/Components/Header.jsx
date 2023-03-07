@@ -10,14 +10,16 @@ import heartIcon from "../images/icons/heart.svg";
 import worldIcon from "../images/icons/world.svg";
 import cartIcon from "../images/icons/cart.svg";
 import { useContext } from "react";
-import { DataContext } from "./../Pages/ContextData";
+import { useTranslation } from "react-i18next";
+import { DataContext } from "./../Pages/Context/ContextData";
 const Header = () => {
   // const [navName, setNavName] = useState(false);
   let { setWorldItem } = useContext(DataContext);
   let { worldItem } = useContext(DataContext);
+  let { cartNum } = useContext(DataContext);
   const activeLink = "text-main-color nav-link-style";
   const normalLink = "text-second-color nav-link-style";
-
+  const [t, i18n] = useTranslation();
   // console.log(worldItem);
   return (
     <>
@@ -29,32 +31,32 @@ const Header = () => {
                 <div className="d-flex align-items-center gap-15 ">
                   <Link className="text-white" to={"#"}>
                     <img src={truckIcon} alt="SVG" className="me-1" />
-                    Free shipping over 100$
+                    {t("free_shipping")}
                   </Link>
                 </div>
                 <div className="d-flex align-items-center gap-15 ">
                   <Link className="text-white" to={"#"}>
                     <img src={disscountIcon} alt="SVG" className="me-1" />
-                    Get up to 40% off
+                    {t("get_up_to")}
                   </Link>
                 </div>
                 <div className="d-flex align-items-center gap-15 ">
                   <Link className="text-white" to={"#"}>
                     {" "}
                     <img src={walletIcon} alt="SVG" className="me-1" />
-                    Flexible payment options
+                    {t("flexible_payment")}
                   </Link>
                 </div>
                 <div className="d-flex align-items-center gap-15">
                   <Link className="text-white" to={"#"}>
                     <img src={mobileIcon} alt="SVG" className="me-1" />
-                    Download App
+                    {t("download_App")}
                   </Link>
                 </div>
                 <div className="d-flex align-items-center gap-15 ">
                   <Link className="text-white" to={"#"}>
                     <img src={callIcon} alt="SVG" className="me-1 " />
-                    Call us
+                    {t("call_us")}
                   </Link>
                 </div>
               </div>
@@ -82,7 +84,7 @@ const Header = () => {
                     }
                     to="/"
                   >
-                    Home
+                    {t("navHome")}
                   </NavLink>
                   <NavLink
                     onClick={() => setWorldItem(false)}
@@ -91,7 +93,7 @@ const Header = () => {
                     }
                     to="/categories"
                   >
-                    Categories
+                    {t("navCategories")}
                   </NavLink>
                   <NavLink
                     onClick={() => setWorldItem(false)}
@@ -100,7 +102,7 @@ const Header = () => {
                     }
                     to="/about"
                   >
-                    About Us
+                    {t("navAbout")}
                   </NavLink>
                   <NavLink
                     onClick={() => setWorldItem(false)}
@@ -109,7 +111,7 @@ const Header = () => {
                     }
                     to="/contact"
                   >
-                    Contact Us
+                    {t("navContact")}
                   </NavLink>
                 </div>
               </div>
@@ -128,9 +130,24 @@ const Header = () => {
                 </div>
                 {worldItem === true ? (
                   <div className="d-flex">
-                    <Link to={"#"}>
-                      <img src={worldIcon} alt="" />
-                    </Link>
+                    {i18n.language === "en" && (
+                      <button
+                        className="world-icon-btn"
+                        onClick={() => i18n.changeLanguage("ar")}
+                        to={"#"}
+                      >
+                        <img src={worldIcon} alt="" />
+                      </button>
+                    )}
+                    {i18n.language === "ar" && (
+                      <button
+                        className="world-icon-btn"
+                        onClick={() => i18n.changeLanguage("en")}
+                        to={"#"}
+                      >
+                        <img src={worldIcon} alt="" />
+                      </button>
+                    )}
                   </div>
                 ) : (
                   <div className="d-none">
@@ -142,13 +159,16 @@ const Header = () => {
 
                 <div>
                   <NavLink
-                    onClick={() => setWorldItem(false)}
+                    onClick={() => {
+                      setWorldItem(false);
+                    }}
                     to="/cart"
                     className=" position-relative"
                   >
                     <img src={cartIcon} alt="" />
                     <span className="position-absolute badge-custom  translate-middle badge rounded-pill bg-danger">
-                      3<span className="visually-hidden">unread messages</span>
+                      {cartNum}
+                      <span className="visually-hidden">unread messages</span>
                     </span>
                   </NavLink>
                 </div>
@@ -162,7 +182,7 @@ const Header = () => {
                   to="/login"
                   className=" nav-login-btn bg-main-color text-white  "
                 >
-                  Login
+                  {t("login")}
                 </NavLink>
               </div>
             </div>

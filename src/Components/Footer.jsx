@@ -7,10 +7,13 @@ import TwitterIcon from "../images/footer icons/Twitter - Negative.svg";
 import locationIcon from "../images/footer icons/location.svg";
 import callIcon from "../images/footer icons/call.svg";
 import mailIcon from "../images/footer icons/sms.svg";
-import { DataContext } from "./../Pages/ContextData";
+
 import { useContext } from "react";
+import { useTranslation } from "react-i18next";
+import { DataContext } from "./../Pages/Context/ContextData";
 const Footer = () => {
   let { setWorldItem } = useContext(DataContext);
+  const [t, i18n] = useTranslation();
   return (
     <>
       <footer className=" footer-top">
@@ -19,10 +22,7 @@ const Footer = () => {
             <div className="col-md-3 pe-5">
               {" "}
               <h4 className="text-main-color mb-3 fs-2">logo</h4>
-              <p>
-                Your web is the yeoman ECommerce who Your web is the ECommerce
-                who you
-              </p>
+              <p>{t("footer_desc")}</p>
               <div className="social-icons d-flex justify-content-between">
                 <Link to="www.facebook.com">
                   <img src={faceIcon} alt="" />
@@ -39,11 +39,11 @@ const Footer = () => {
               </div>
             </div>
             <div className="col-md-3  ">
-              <h4 className="text-main-color mb-3 fs-5">Contact us</h4>
+              <h4 className="text-main-color mb-3 fs-5">{t("contact_us")}</h4>
               <div className="footer-links d-flex flex-column gap-4">
                 <Link to="#" className="text-dark">
                   <img className="me-1" src={locationIcon} alt="" />
-                  123 Street Name ,City,country
+                  {t("footer_location")}
                 </Link>
                 <Link to="#" className="text-dark">
                   <img className="me-1" src={callIcon} alt="" />
@@ -57,7 +57,7 @@ const Footer = () => {
             </div>
             <div className="col-md-2  ">
               <h4 className="text-main-color mb-3 d-block fs-5">
-                Customer Servie
+                {t("footer_customer_service")}
               </h4>
               <div className="footer-links d-flex flex-column gap-4">
                 <Link
@@ -65,50 +65,52 @@ const Footer = () => {
                   to="/faqs"
                   className="text-dark"
                 >
-                  Help & FAQs
+                  {t("footer_Help_FAQs")}
                 </Link>
                 <Link
                   onClick={() => setWorldItem(false)}
                   to="/trackorder"
                   className="text-dark"
                 >
-                  Order Tracking
+                  {t("order_tracking")}
                 </Link>
                 <Link
                   onClick={() => setWorldItem(false)}
                   to="/terms"
                   className="text-dark"
                 >
-                  Sitemap
+                  {t("footer_sitemap")}
                 </Link>
               </div>
             </div>
             <div className="col-md-2">
-              <h4 className="text-main-color mb-3 fs-5">Company</h4>
+              <h4 className="text-main-color mb-3 fs-5">
+                {t("footer_company")}
+              </h4>
               <div className="footer-links d-flex flex-column gap-4">
                 <Link to="#" className="text-dark">
-                  Help & FAQs
+                  {t("footer_Help_FAQs")}
                 </Link>
                 <Link to="#" className="text-dark">
-                  Order Tracking
+                  {t("order_tracking")}
                 </Link>
                 <Link to="#" className="text-dark">
-                  Sitemap
+                  {t("footer_sitemap")}
                 </Link>
               </div>
             </div>
             <div className="col-md-2 footer-subscribe  ps-5">
-              <h4 className="text-main-color mb-3 fs-5">Be in Touch</h4>
+              <h4 className="text-main-color mb-3 fs-5">{t("footer_Touch")}</h4>
               <div>
                 <input
                   type="text"
                   className="footer-input my-3"
-                  placeholder="Enter your mail"
+                  placeholder={t("footer_Touch_input")}
                   aria-label="Enter your mail"
                   aria-describedby="basic-addon1"
                 />
                 <button className="btn btn-outline-dark  rounded-pill">
-                  Subscribe
+                  {t("subscribe")}
                 </button>
               </div>
             </div>
@@ -121,8 +123,8 @@ const Footer = () => {
           <div className="row">
             <div className="col-md-12 ">
               <p className="pt-3 text-center text-second-color">
-                &copy;{new Date().getFullYear()} website name. All rights
-                reserved.
+                &copy;{new Date().getFullYear()}
+                {t("website_name_reserved")}
               </p>
             </div>
           </div>

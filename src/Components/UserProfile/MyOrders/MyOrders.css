@@ -1,0 +1,145 @@
+.my-orders {
+  width: 775px;
+  margin-left: 10px;
+}
+.my-orders-heading {
+  width: 100%;
+  height: 50px;
+  margin: 30px 0 0px 0;
+  /* padding-top: 15px; */
+  padding: 0px 8px 0px 8px;
+  background: #f1a002;
+}
+
+.my-orders-card {
+  background: #f4f4f4;
+  margin-top: 16px;
+  padding: 20px 15px 20px 0;
+}
+.orders-card-container {
+  padding-top: 160px;
+}
+.my-orders-desc {
+  padding-top: 15px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  /* identical to box height */
+  color: #ffffff;
+}
+.orders-product-name {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+
+  color: #000000;
+}
+.orders-product-desc {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 126.19%;
+
+  color: #646464;
+}
+.orders-product-date {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+
+  /* #363636 */
+
+  color: #363636;
+}
+.orders-product-summary {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+
+  /* #363636 */
+
+  color: #363636;
+}
+.orders-product-status {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+
+  color: #02f145;
+}
+.orders-product-btn {
+  width: 120px;
+  height: 40px;
+  /* margin: 93px 10px 10px 0; */
+  /* margin-top: 93px;
+    margin-bottom: 10px; */
+  /* #F1A002 */
+
+  border: 1.5px solid #f1a002;
+  border-radius: 10px;
+
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+
+  /* #F1A002 */
+
+  color: #f1a002;
+}
+
+.orders-empty {
+  width: 775px;
+  margin: 100px 50px 0 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.orders-empty-text {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 143.69%;
+  /* identical to box height, or 52px */
+  padding: 39px 0 34px 0;
+  text-align: center;
+  letter-spacing: 0.11em;
+
+  /* main */
+
+  color: #f1a002;
+}
+.orders-empty-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  height: 52px;
+  background: #f1a002;
+  border-radius: 10px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 12px;
+  /* identical to box height, or 75% */
+
+  /* Background */
+
+  color: #ffffff;
+}
+.orders-empty-btn:hover {
+  color: #ffffff;
+}

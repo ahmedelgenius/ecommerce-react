@@ -1,0 +1,168 @@
+.sidebar {
+  width: 100%;
+  height: 730px;
+  background: #f4f4f4;
+}
+.sidebar-user-name {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 26px;
+  /* identical to box height */
+  padding: 40px 45px 5px 45px;
+
+  display: flex;
+  align-items: center;
+
+  /* typo color */
+
+  color: #363636;
+}
+.sidebar-email {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 21px;
+  padding: 0px 45px 7px 45px;
+
+  display: flex;
+  align-items: center;
+
+  color: #bcbcbc;
+}
+.sidebar-list-item {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px 45px 0px 45px;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin: 0 !important;
+  width: 100%;
+  height: 60px;
+  color: #363636;
+}
+.sidebar-list-select {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px 45px 0px 45px;
+
+  width: 100%;
+  /* height: 65px; */
+  color: #363636;
+}
+.sidebar-nav-link {
+  margin-top: 4px;
+  position: relative;
+}
+
+.sidebar-nav-link::before {
+  content: "";
+  position: absolute;
+  top: -19px;
+  right: 45px;
+  left: 0px;
+  background-color: #f1a002;
+  height: 1px;
+  width: 265px;
+  /* margin-top: 28px; */
+}
+.sidebar-nav-link-card {
+  position: relative;
+}
+.sidebar-nav-link-card::before {
+  content: "";
+  position: absolute;
+  top: -19px;
+  right: 45px;
+  left: 0px;
+  background-color: #f1a002;
+  height: 1px;
+  width: 265px;
+  /* margin-top: 28px; */
+}
+.sidebar-nav-link-card::after {
+  content: "";
+  position: absolute;
+  bottom: -19px;
+  right: 45px;
+  left: 0px;
+  background-color: #f1a002;
+  height: 1px;
+  width: 265px;
+  /* margin-top: 28px; */
+}
+.sidebar-list-item a {
+  color: #363636;
+}
+.sidebar-list-item:hover {
+  color: #363636;
+}
+.sidebar-list-sign {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  padding: 0px 45px 0px 45px !important;
+  height: 69px;
+
+  display: flex;
+  align-items: center;
+}
+.sidebar-list-sign button {
+  border: none;
+  background-color: transparent;
+  color: #646464 !important;
+}
+.sidebar-active-link {
+  width: 100%;
+  height: 67px;
+
+  background: #f1a002;
+  color: #ffffff;
+  padding-top: 10px !important;
+}
+.sidebar-active-link:hover {
+  color: #ffffff;
+}
+
+/* * select sidebar */
+.sidebar-list-select .css-13cymwt-control {
+  background-color: transparent !important;
+  border: none !important;
+}
+.sidebar-list-select .css-t3ipsp-control {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+.sidebar-list-select .css-1jqq78o-placeholder {
+  color: #363636 !important;
+}
+.sidebar-list-select .css-1fdsijx-ValueContainer {
+  padding: 0 !important;
+}
+.sidebar-list-select .css-1xc3v61-indicatorContainer {
+  color: #292d32 !important;
+}
+.sidebar-list-select .css-tj5bde-Svg {
+  width: 25px !important;
+  height: 25px !important;
+}
+.css-1f43avz-a11yText-A11yText {
+  display: none !important;
+}
+.sidebar-list-select .css-b62m3t-container {
+  height: 23px !important;
+}

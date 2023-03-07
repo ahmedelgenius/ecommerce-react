@@ -1,0 +1,88 @@
+.credit-card {
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  margin: 0 10px;
+  border-radius: 24.7201px;
+
+  width: 252.15px;
+  height: 147.5px;
+  padding: 22px 24px;
+}
+.credit-card-number {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18.1281px;
+  line-height: 26px;
+  letter-spacing: 4px;
+  width: 100%;
+  color: #ffffff;
+  opacity: 0.9;
+  padding-top: 12px;
+}
+.credit-card-holder {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 9.88804px;
+  line-height: 12px;
+
+  color: #ffffff;
+  margin-bottom: 0px;
+
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+.card-holder-name {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11.536px;
+  line-height: 14px;
+  color: #ffffff;
+}
+.credit-card-date {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11.536px;
+  line-height: 14px;
+  text-align: right;
+  letter-spacing: 0.412002px;
+  padding-top: 13px;
+  color: #ffffff;
+}
+.circle-top {
+  box-sizing: border-box;
+  position: absolute;
+  width: 264.51px;
+  height: 186.22px;
+  left: 107.12px;
+  top: -117.96px;
+  background: #000000;
+  opacity: 0.08;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.circle-bottom {
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 264.51px;
+  height: 186.22px;
+  left: -94.06px;
+  top: 87.45px;
+
+  background: #000000;
+  opacity: 0.1;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
