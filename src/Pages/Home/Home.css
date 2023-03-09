@@ -1,3 +1,13 @@
+.home-category img {
+  width: 100%;
+}
+
+@media only screen and (min-width: 1920px) {
+  .home-category img {
+    width: calc(100% / 3);
+  }
+}
+
 /* * our categories  */
 .category-name {
   font-size: 18px;
@@ -175,16 +185,16 @@
 }
 /* * carousel */
 .container-carousel .react-multiple-carousel__arrow--right {
-  right: calc(0% + 1px) !important;
+  right: 21px !important;
   top: calc(25% + 1px) !important;
 }
 .container-carousel {
   /* background-color: red; */
-  width: 90%;
+  width: 95%;
   margin: auto;
 }
 .container-carousel .react-multiple-carousel__arrow--left {
-  left: calc(-1% + 1px) !important;
+  left: -9px !important;
   top: calc(25% + 1px) !important;
 }
 .container-carousel .react-multiple-carousel__arrow:hover {
@@ -198,4 +208,27 @@
 .container-carousel .react-multiple-carousel__arrow::before {
   font-size: 22px !important;
   color: #000000 !important;
+}
+
+/* @media only screen and (min-width: 1225px) {
+  .container-carousel .react-multiple-carousel__arrow--right {
+    right: 3px !important;
+    top: calc(25% + 1px) !important;
+  }
+} */
+@media only screen and (min-width: 1400px) {
+  .container-carousel .react-multiple-carousel__arrow--right {
+    right: 32px !important;
+    top: calc(25% + 1px) !important;
+  }
+}
+
+/* Large screens ----------- */
+@media only screen and (min-width: 1824px) {
+  /* Styles */
+  .container-carousel .react-multiple-carousel__arrow--right {
+    right: 21px !important;
+
+    top: calc(25% + 1px) !important;
+  }
 }
