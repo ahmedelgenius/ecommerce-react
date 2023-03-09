@@ -32,30 +32,26 @@ const Home = () => {
       {/* Home categories */}
       <section className="categories py-2">
         <div className="container--xxl">
-          <div className="d-flex  gap-2">
-            <div className="">
-              <div className="home-category">
-                <img src={cateImg1} className="" alt="" />
+          <div className="d-flex  gap-2 w-100">
+            <div className="home-category">
+              <img src={cateImg1} className="" alt="" />
+            </div>
+
+            <div className="home-category position-relative">
+              <img src={cateImg2} className="" alt="" />
+              <div className="category-info position-absolute top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center flex-column">
+                <h2 className="category-title">{t("flash_sale")}</h2>
+                <h2 className="category-discount text-main-color">
+                  {t("up_to")}
+                </h2>
+                <button className="btn btn-border-r bg-main-color px-4  text-white">
+                  {t("shop_now")}
+                </button>
               </div>
             </div>
-            <div className="">
-              <div className="home-category position-relative">
-                <img src={cateImg2} className="" alt="" />
-                <div className="category-info position-absolute top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center flex-column">
-                  <h2 className="category-title">{t("flash_sale")}</h2>
-                  <h2 className="category-discount text-main-color">
-                    {t("up_to")}
-                  </h2>
-                  <button className="btn btn-border-r bg-main-color px-4  text-white">
-                    {t("shop_now")}
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div className="">
-              <div className="home-category">
-                <img src={cateImg3} className="" alt="" />
-              </div>
+
+            <div className="home-category">
+              <img src={cateImg3} className="" alt="" />
             </div>
           </div>
         </div>
